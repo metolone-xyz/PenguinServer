@@ -20,11 +20,14 @@ pyenv global 3.11.4
 # 6. pipのアップグレード
 pip install --upgrade pip
 
-# 7. 設定ファイルの生成
+# 7. jupyternotebookをpipを使ってイントール
+pip install notebook
+
+# 8. 設定ファイルの生成
 jupyter notebook --generate-config
 
-# 8. 設定ファイルの編集
+# 9. 設定ファイルの編集
 sed -i "s/# c.ServerApp.ip = 'localhost'/c.ServerApp.ip = '*'/" ~/.jupyter/jupyter_notebook_config.py
 
-# 9. jupyter-notebookの実行
+# 10. jupyter-notebookの実行
 jupyter notebook --ip 10.133.0.61
